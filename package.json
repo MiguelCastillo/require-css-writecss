@@ -1,0 +1,25 @@
+{
+  "name": "require-css-writecss",
+  "version": "0.0.1",
+  "description": "require-css-writecss ====================",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MiguelCastillo/require-css-writecss.git"
+  },
+  "author": "Miguel Castillo <manchagnu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MiguelCastillo/require-css-writecss/issues"
+  },
+  "homepage": "https://github.com/MiguelCastillo/require-css-writecss",
+  "dependencies": {
+    "requirejs": "~2.1.15"
+  },
+  "scripts": {
+    "test": "r.js -o build.js"
+  }
+}
