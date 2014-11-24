@@ -26,3 +26,11 @@ define('css!index2',["@writecss"], function(writeCss){
 ```
 
 The new stuff is `writecss`.
+
+To verify that this whole thing works, there is a very small sample page.  You can run it with:
+
+```
+$ grunt start
+```
+
+Now you can open up <a href="http://localhost:8989">http://localhost:8989</a>.  You should see a light grey background page with some borders.
