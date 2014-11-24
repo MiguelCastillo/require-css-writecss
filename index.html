@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>require-css-writecss</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Miguel Castillo">
+
+    <script src="node_modules/requirejs/require.js"></script>
+    <script src="requirejs-config.js"></script>
+    <script>
+      require(["index-built"], function() {
+        require(["index"], function() {
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    This content should have a background of #bcbcbc and font color of #232323, with a margin of 20px and no padding, and border: 1px solid #000
+  </body>
+</html>

@@ -1,3 +1,6 @@
+# exclude build artifact
+index-built.js
+
 # npm junk
 node_modules
 
