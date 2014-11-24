@@ -1,4 +1,3 @@
-//>>excludeStart('excludeRequireCss', pragmas.excludeRequireCss)
 /*
  * css.normalize.js
  *
@@ -31,7 +30,7 @@
  *
  */
 
-define(function() {
+define('normalize',[],function() {
   
   // regular expression for removing double slashes
   // eg http://www.example.com//my///url/here -> http://www.example.com/my/url/here
@@ -138,4 +137,19 @@ define(function() {
   
   return normalizeCSS;
 });
-//>>excludeEnd('excludeRequireCss')
+;
+define('css',[],function(){if("undefined"==typeof window)return{load:function(e,t,n){n()}};var e=document.getElementsByTagName("head")[0],t=window.navigator.userAgent.match(/Trident\/([^ ;]*)|AppleWebKit\/([^ ;]*)|Opera\/([^ ;]*)|rv\:([^ ;]*)(.*?)Gecko\/([^ ;]*)|MSIE\s([^ ;]*)/)||0,n=!1,r=!0;t[1]||t[7]?n=parseInt(t[1])<6||parseInt(t[7])<=9:t[2]?r=!1:t[4]&&(n=parseInt(t[4])<18);var o={};o.pluginBuilder="./css-builder";var a,s,l,i=function(){a=document.createElement("style"),e.appendChild(a),s=a.styleSheet||a.sheet},u=0,c=[],d=function(e){u++,32==u&&(i(),u=0),s.addImport(e),a.onload=f},f=function(){l();var e=c.shift();return e?(l=e[1],void d(e[0])):void(l=null)},h=function(e,t){if(s&&s.addImport||i(),s&&s.addImport)l?c.push([e,t]):(d(e),l=t);else{a.textContent='@import "'+e+'";';var n=setInterval(function(){try{a.sheet.cssRules,clearInterval(n),t()}catch(e){}},10)}},p=function(t,n){var o=document.createElement("link");if(o.type="text/css",o.rel="stylesheet",r)o.onload=function(){o.onload=function(){},setTimeout(n,7)};else var a=setInterval(function(){for(var e=0;e<document.styleSheets.length;e++){var t=document.styleSheets[e];if(t.href==o.href)return clearInterval(a),n()}},10);o.href=t,e.appendChild(o)};return o.normalize=function(e,t){return".css"==e.substr(e.length-4,4)&&(e=e.substr(0,e.length-4)),t(e)},o.load=function(e,t,r){(n?h:p)(t.toUrl(e+".css"),r)},o});
+
+define('@writecss', function writeCss(c){var d=document,a='appendChild',i='styleSheet',s=d.createElement('style');s.type='text/css';d.getElementsByTagName('head')[0][a](s);s[i]?s[i].cssText=c:s[a](d.createTextNode(c));});
+
+define('css!index1',["@writecss"], function(writeCss){
+ writeCss("html, body {\n  padding: 0px;\n}");
+});
+
+define('css!index2',["@writecss"], function(writeCss){
+ writeCss(".index2 {\n  clear: both;\n}\n");
+});
+define('index',['css!index1.css', 'css!index2.css'], function() {
+
+});
+

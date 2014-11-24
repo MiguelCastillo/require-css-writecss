@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/MiguelCastillo/require-css-writecss",
   "dependencies": {
-    "requirejs": "~2.1.15"
+    "requirejs": "~2.1.15",
+    "require-css": "git://github.com/MiguelCastillo/require-css.git"
   },
   "scripts": {
     "test": "r.js -o build.js"
