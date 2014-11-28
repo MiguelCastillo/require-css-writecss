@@ -1,7 +1,7 @@
 require-css-writecss
 ====================
 
-Test for require-css using the `writeCSSModule` flag when building with `r.js`.  The `writeCSSModule` is to allow modules to load css ondemand rather than letting require-css load the css as soon as the application loads.  The fundamental issue is that this during applcation development, css assets are loading dynamically, and without this `writeCSSModule` feature the application will load these assets into the DOM as soon as the application loads. So why should it be different in development and when running the build artifacts from `r.js`?
+Test for require-css using the `writeCSSModule` flag when building an application with `r.js`.  The `writeCSSModule` is to allow modules to load css ondemand rather than letting require-css load the css assets as soon as the application loads.  So why should your application behave differently in development and after processing it with `r.js`?
 
 To enable it, use the flag `writeCSSModule: true` as we do in <a href="https://github.com/MiguelCastillo/require-css-writecss/blob/master/build.js#L10">build.js</a>.
 
